@@ -1,4 +1,4 @@
-/* =========================
+tabout-box/* =========================
    GLOBAL RESET
 ========================= */
 
@@ -12,13 +12,13 @@
 }
 
 
-
 body {
 
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     background: black;
 
@@ -1006,7 +1006,16 @@ body {
 ========================= */
 
 
-#about-screen,
+#about-screen{
+    width: 100%;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
 #skills-screen {
 
     width: 100%;
@@ -1021,11 +1030,22 @@ body {
 
 }
 
+.about-box{
+    
+    width: 900px;
 
 
+    background:
+
+        rgba(0, 0, 0, 0.75);
 
 
-.about-box,
+    border: 2px solid white;
+
+
+    backdrop-filter: blur(10px);
+}
+
 .skills-box {
 
 
@@ -1048,10 +1068,27 @@ body {
 
 }
 
+.about-box h1{
+
+     text-align: center;
+
+
+    font-family: 'Orbitron';
+
+
+    font-size: 45px;
+
+
+    letter-spacing: 5px;
+
+
+    margin-top: 200px;
+
+
+}
 
 
 
-.about-box h1,
 .skills-box h1 {
 
 
@@ -1067,7 +1104,7 @@ body {
     letter-spacing: 5px;
 
 
-    margin-top: 90px;
+    margin-top: 10px;
 
 
 }
@@ -1828,9 +1865,12 @@ body::after {
 /* Brand Portfolio screen only */
 #brand_portfolio{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     overflow-y: auto;
-    padding: 30px 0;
+    overflow-x: hidden;
+    padding: 30px 0 80px;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Gallery */
@@ -1872,7 +1912,47 @@ body {
 #photography_poster,
 #micro_world,
 #brand_portfolio {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+@media (max-width:768px) {
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Brand Portfolio only */
+    #brand_portfolio .gallery-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .ps-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .psBtn {
+        font-size: 18px;
+        padding: 18px;
+    }
+
+    .back-btn,
+    .blenderback-btn {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width:768px){
+
+    #brand_portfolio{
+        display:block;
+        overflow-y:auto;
+    }
+
+    #brand_portfolio .blenderback-btn{
+        margin:30px auto;
+    }
 }
