@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sanjay Kumar | Game Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Orbitron Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- LOADING SCREEN -->
+    <!-- ========================= -->
+
+    <div id="loading-screen">
+
+        <div class="loading-content">
+
+            <h1>SANJAY KUMAR</h1>
+
+            <p>Initializing Portfolio...</p>
+
+            <div class="loading-bar">
+
+                <div class="loading-progress"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- VIDEO BACKGROUND -->
+    <!-- ========================= -->
+
+    <video id="bg-video" autoplay muted loop playsinline>
+
+        <source src="video/Black.mp4" type="video/mp4">
+
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <!-- ========================= -->
+    <!-- PRESS START SCREEN -->
+    <!-- ========================= -->
+
+    <section id="start-screen">
+
+        <div class="logo-area">
+
+            <h1>
+
+                SANJAY
+                <span>KUMAR</span>
+
+            </h1>
+
+            <h2>
+
+                UNITY GAME DEVELOPER
+
+            </h2>
+
+        </div>
+
+        <button id="startBtn">
+
+            ► PRESS START
+
+        </button>
+
+        <p class="version">
+
+            Version 6000.3.9
+
+        </p>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- MAIN MENU -->
+    <!-- Hidden Initially -->
+    <!-- ========================= -->
+
+    <section id="main-menu" class="hidden">
+
+        <div class="menu-box">
+
+            <h2>
+                <br>
+                <br>
+
+                MAIN MENU
+
+            </h2>
+
+            <ul>
+
+                <li data-screen="home">
+
+                    HOME
+
+                </li>
+
+                <li data-screen="games">
+
+                    MY PROJECTS
+
+                </li>
+
+                <li data-screen="about">
+
+                    ABOUT
+
+                </li>
+
+                <li data-screen="skills">
+
+                    SKILLS
+
+                </li>
+
+                <li data-screen="gallery">
+
+                    GALLERY
+
+                </li>
+
+                <li data-screen="contact">
+
+                    CONTACT
+
+                </li>
+
+
+                <li data-screen="settings">
+
+                    SETTINGS
+
+                </li>
+
+
+                <li id="exitBtn">
+
+                    EXIT
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- Part 2 Starts Here -->
+
+
+    <!-- ========================= -->
+    <!-- CONTENT AREA -->
+    <!-- Future Screens -->
+    <!-- ========================= -->
+
+    <div id="content-area" class="hidden">
+
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- GAME SELECT SCREEN -->
+    <!-- ========================= -->
+
+    <section id="games-screen" class="game-screen hidden">
+
+
+        <div class="games-container">
+
+
+            <h1>
+                SELECT YOUR GAME
+            </h1>
+
+
+            <div class="game-list">
+
+
+                <div class="game-card">
+
+
+                    <img src="Pic/graveyard_title.png">
+
+
+                    <h2>
+                        THE CURSED GRAVEYARD
+                    </h2>
+
+
+                    <p>
+                        3D Horror Survival Game
+                    </p>
+
+
+                    <button class="view-game" data-game="graveyard">
+
+                        VIEW GAME
+
+                    </button>
+
+
+                </div>
+
+
+
+                <div class="game-card">
+
+
+                    <img src="Pic/astrorunner_title.png">
+
+
+                    <h2>
+                        ASTRO RUNNER
+
+                    </h2>
+
+                    <p>
+                        Endless Space Runner Game
+                    </p>
+
+                    <br>
+
+
+                    <button class="view-game" data-game="astro">
+
+                        VIEW GAME
+
+                    </button>
+
+
+                </div>
+
+
+
+                <div class="game-card">
+
+
+                    <img src="Pic/hunter_title.png">
+
+
+                    <h2>
+                        THE TREASURE HUNTERS
+                    </h2>
+
+
+                    <p>
+                        Adventure Action Game
+                    </p>
+
+
+                    <button class="view-game" data-game="treasure">
+
+                        VIEW GAME
+
+                    </button>
+
+                </div>
+
+                 <div class="game-card">
+
+
+                    <img src="Pic/temple.png">
+
+
+                    <h2>
+                        TEMPLE OF LUCK
+                    </h2>
+
+
+                    <p>
+                        Slot Gme
+                    </p>
+
+
+                    <button class="view-game" data-game="temple">
+
+                        VIEW GAME
+
+                    </button>
+
+                </div>
+
+
+
+            </div>
+
+
+            <button id="backMenu" class="back-btn">
+
+                ◀ BACK TO MENU
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- AUDIO SYSTEM -->
+    <!-- ========================= -->
+
+    <audio id="bgMusic" src="audio/background.mp3" loop>
+    </audio>
+
+
+    <audio id="selectSound" src="audio/click.mp3">
+    </audio>
+
+
+    <audio id="hoverSound" src="audio/hover.mp3">
+    </audio>
+
+
+    <audio id="clickSound" src="audio/click.mp3">
+    </audio>
+
+
+
+    <!-- ========================= -->
+    <!-- GAME DETAILS SCREEN -->
+    <!-- ========================= -->
+    <section id="game-details" class="hidden">
+
+        <div class="details-box">
+
+            <h1 id="gameTitle"></h1>
+
+            <video id="gameVideo" controls width="100%">
+                <source id="gameVideoSource" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+      
+
+            <p id="gameDescription"></p>
+
+            <button id="detailsBack" class="back-btn">
+                ◀ BACK
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- My Project -->
+    <!-- ========================= -->
+    <section id="projects-screen" class="hidden">
+
+        <div class="games-container">
+
+            <h1>MY PROJECTS</h1>
+
+            <div class="game-list">
+
+                <div class="game-card">
+
+                    <img src="Pic/Unity.jpg">
+
+                    <h2>UNITY</h2>
+
+                    <p>Game Development Projects</p>
+
+                    <button id="unityBtn">
+                        VIEW
+                    </button>
+
+                </div>
+
+                <div class="game-card">
+
+                    <img src="Pic/Blender.jpg">
+
+                    <h2>BLENDER</h2>
+
+                    <p>3D Models & Environment</p>
+
+                    <button id="blenderBtn">
+                        VIEW
+                    </button>
+
+                </div>
+
+                <div class="game-card">
+
+                    <img src="Pic/Photoshop.png">
+
+                    <h2>PHOTOSHOP</h2>
+
+                    <p>UI & Graphic Designs</p>
+
+                    <button id="photoshopBtn">
+                        VIEW
+                    </button>
+
+                </div>
+
+            </div>
+
+            <button id="projectsBack" class="back-btn">
+                ◀ BACK TO MENU
+            </button>
+        </div>
+
+    </section>
+
+    <section id="unity-screen" class="hidden">
+
+        <div class="games-container">
+
+            <h1>UNITY PROJECTS</h1>
+
+            <div class="game-list">
+
+                <div class="game-card">
+
+                    <img src="Pic/graveyard_title.png">
+
+                    <h2>The Cursed Graveyard</h2>
+
+                    <button class="view-game" data-game="graveyard">
+                        VIEW PROJECT
+                    </button>
+
+                </div>
+
+                <div class="game-card">
+
+                    <img src="Pic/astrorunner_title.png">
+
+                    <h2>Astro Runner</h2>
+
+                    <button class="view-game" data-game="astro">
+                        VIEW PROJECT
+                    </button>
+
+                </div>
+
+                <div class="game-card">
+
+                    <img src="Pic/hunter_title.png">
+
+                    <h2>Treasure Hunters</h2>
+
+                    <button class="view-game" data-game="treasure">
+                        VIEW PROJECT
+                    </button>
+
+                </div>
+
+                <div class="game-card">
+
+                    <img src="Pic/temple.png">
+
+                    <h2>Temple Of Luck</h2>
+
+                    <button class="view-game" data-game="temple">
+                        VIEW PROJECT
+                    </button>
+
+                </div>
+
+            </div>
+
+            <button id="unityBack" class="back-btn">
+                ◀ BACK
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="blender-screen" class="hidden">
+
+        <div class="gallery-box">
+
+            <h1>BLENDER PROJECTS</h1>
+
+            <div class="gallery-container">
+
+                <img src="Pic/Blender1.png">
+                <img src="Pic/Blender2.png">
+                <img src="Pic/Blender3.png">
+                <img src="Pic/Blender4.png">
+                <img src="Pic/Blender5.png">
+                <img src="Pic/Blender6.png">
+
+            </div>
+
+            <button id="blenderBack" class="blenderback-btn">
+                ◀ BACK
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="photoshop-screen" class="hidden">
+
+
+
+        <div class="gallery-box">
+
+            <h1>PHOTOSHOP PROJECTS</h1>
+            <div class="ps-buttons">
+
+                <button id="digitalBtn" class="psBtn">Digital Paintings</button>
+                <button id="artBtn" class="psBtn">Art Deco</button>
+                <button id="posterBtn" class="psBtn">Posters</button>
+                <button id="photoBtn" class="psBtn">Photography Posters</button>
+                <button id="microBtn" class="psBtn">Micro World</button>
+                <button id="brandBtn" class="psBtn">Brand Portfolio</button>
+
+            </div>
+
+            <button id="photoshopBack" class="blenderback-btn">
+                ◀ BACK
+            </button>
+        </div>
+
+    </section>
+
+    <section id="digital-screen" class="hidden">
+
+        <div class="gallery-box">
+
+            <h1>DIGITAL PAINTINGS</h1>
+
+            <div class="gallery-container digital-gallery">
+
+                <img src="Pic/DigitalPainting1.jpg">
+                <img src="Pic/DigitalPainting2.jpg">
+                <img src="Pic/DigitalPainting3.jpg">
+                <img src="Pic/DigitalPainting4.jpg">
+                <img src="Pic/DigitalPainting5.jpg">
+                <img src="Pic/DigitalPainting6.jpg">
+
+            </div>
+
+            <button id="digitalBack" class="blenderback-btn">
+                ◀ BACK
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="art_deco" class="hidden">
+
+        <div class="gallery-box">
+
+            <h1>ART DECO</h1>
+
+            <div class="gallery-container">
+
+                <img src="Pic/Artdeco1.jpg">
+
+            </div>
+
+            <button id="artBack" class="blenderback-btn">
+                ◀ BACK
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="micro_world" class="hidden">
+
+        <div class="gallery-box">
+
+            <h1>MICRO WORLD</h1>
+
+            <div class="gallery-container">
+
+                <img src="Pic/MicroWorld1.png">
+
+            </div>
+
+            <button id="microBack" class="blenderback-btn">
+                ◀ BACK
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="poster" class="hidden">
+
+        <div class="gallery-box">
+
+            <h1>POSTERS</h1>
+
+            <div class="gallery-container">
+
+                <img src="Pic/Poster1.jpg">
+                <img src="Pic/Poster2.jpg">
+                <img src="Pic/Poster3.jpg">
+                <img src="Pic/Poster4.jpg">
+                <img src="Pic/Poster5.jpg">
+
+            </div>
+
+            <button id="posterBack" class="blenderback-btn">
+                ◀ BACK
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="photography_poster" class="hidden">
+
+        <div class="gallery-box">
+
+            <h1>PHOTOGRAPHY POSTERS</h1>
+
+            <div class="gallery-container">
+
+                <img src="Pic/PhotographyPoster1.jpg">
+                <img src="Pic/PhotographyPoster2.jpg">
+                <img src="Pic/PhotographyPoster3.jpg">
+                <img src="Pic/PhotographyPoster4.jpg">
+                <img src="Pic/PhotographyPoster5.jpg">
+                <img src="Pic/PhotographyPoster6.jpg">
+
+            </div>
+
+            <button id="photoBack" class="blenderback-btn">
+                ◀ BACK
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="brand_portfolio" class="hidden">
+
+        <div class="gallery-box">
+
+            <h1>BRAND PORTFOLIO</h1>
+
+            <div class="gallery-container">
+
+                <img src="Pic/BP1.png">
+                <img src="Pic/BP2.png">
+                <img src="Pic/BP3.png">
+                <img src="Pic/BP4.png">
+                <img src="Pic/BP5.png">
+                <img src="Pic/BP6.png">
+                <img src="Pic/BP7.png">
+                <img src="Pic/BP8.png">
+                <img src="Pic/BP9.png">
+
+
+            </div>
+
+            <button id="brandBack" class="blenderback-btn">
+                ◀ BACK
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- ABOUT SCREEN -->
+    <!-- ========================= -->
+
+    <section id="about-screen" class="hidden">
+
+
+        <div class="about-box">
+
+
+            <h1>
+
+                ABOUT ME
+
+            </h1>
+
+
+
+            <div class="about-text">
+
+
+                <h2>
+
+                    SANJAY KUMAR
+
+                </h2>
+
+
+                <p>
+
+                    UNITY GAME DEVELOPER
+
+                </p>
+
+
+
+                <p>
+
+                  I am a Unity Game Developer with experience creating 2D and 3D games using Unity and C#.
+                   I have developed gameplay systems, UI, inventory mechanics, AI, and level designs while focusing on performance and clean code.
+                   I enjoy turning creative ideas into engaging player experiences and continuously expanding my skills in Blender, Photoshop, and modern game development technologies.
+
+                </p>
+
+
+
+                <div class="role">
+
+
+                    GAME DEVELOPMENT PROFILE
+
+
+                </div>
+
+
+
+                <p>
+
+
+                    ✓ Unity Development
+
+                    <br>
+
+                    ✓ C# Programming
+
+                    <br>
+
+                    ✓ 2D & 3D Game Development
+
+                    <br>
+
+                    ✓ Level Design
+
+                    <br>
+
+                    ✓ Blender 3D
+
+                    <br>
+
+                    ✓ Photoshop
+
+
+                </p>
+
+
+
+            </div>
+
+
+
+            <button id="aboutBack" class="back-btn">
+
+                ◀ BACK
+
+            </button>
+
+
+        </div>
+
+
+    </section><!-- ========================= -->
+    <!-- SKILLS SCREEN -->
+    <!-- ========================= -->
+
+    <section id="skills-screen" class="hidden">
+
+
+        <div class="skills-box">
+
+
+            <h1>
+
+                SKILLS
+
+            </h1>
+
+
+
+
+            <!-- UNITY -->
+
+            <div class="skill">
+
+
+                <div class="skill-title">
+
+                    <span>
+                        UNITY ENGINE
+                    </span>
+
+                    <span>
+                        90%
+                    </span>
+
+                </div>
+
+
+
+                <div class="skill-bar">
+
+                    <div class="skill-progress unity">
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <!-- C# -->
+
+            <div class="skill">
+
+
+                <div class="skill-title">
+
+                    <span>
+                        C# PROGRAMMING
+                    </span>
+
+
+                    <span>
+                        85%
+                    </span>
+
+                </div>
+
+
+
+                <div class="skill-bar">
+
+
+                    <div class="skill-progress csharp">
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <!-- LEVEL DESIGN -->
+
+            <div class="skill">
+
+
+                <div class="skill-title">
+
+
+                    <span>
+                        LEVEL DESIGN
+                    </span>
+
+
+                    <span>
+                        90%
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="skill-bar">
+
+
+                    <div class="skill-progress level-design">
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <!-- BLENDER -->
+
+            <div class="skill">
+
+
+                <div class="skill-title">
+
+
+                    <span>
+                        BLENDER 3D
+                    </span>
+
+
+                    <span>
+                        70%
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="skill-bar">
+
+
+                    <div class="skill-progress blender">
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <!-- PHOTOSHOP -->
+
+            <div class="skill">
+
+
+                <div class="skill-title">
+
+
+                    <span>
+                        PHOTOSHOP
+                    </span>
+
+
+                    <span>
+                        75%
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="skill-bar">
+
+
+                    <div class="skill-progress photoshop">
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <button id="skillsBack" class="back-btn">
+
+                ◀ BACK
+
+            </button>
+
+
+
+        </div>
+
+
+    </section><!-- ========================= -->
+    <!-- GALLERY SCREEN -->
+    <!-- ========================= -->
+
+    <section id="gallery-screen" class="hidden">
+
+
+        <div class="gallery-box">
+
+
+            <h1>
+
+                GALLERY
+
+            </h1>
+
+
+
+            <div class="gallery-container">
+
+
+                <img src="Pic/Gallery1.png">
+                <img src="Pic/Gallery2.png">
+                <img src="Pic/Gallery3.png">
+                <img src="Pic/Gallery4.png">
+                <img src="Pic/Gallery5.png">
+                <img src="Pic/Gallery6.png">
+
+
+            </div>
+
+
+
+            <button id="galleryBack" class="back-btn">
+
+                ◀ BACK
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- CONTACT SCREEN -->
+    <!-- ========================= -->
+
+
+    <section id="contact-screen" class="hidden">
+
+
+        <div class="contact-box">
+
+
+            <h1>
+
+                CONTACT
+
+            </h1>
+
+
+
+            <div class="contact-text">
+
+
+                <h2>
+
+                    SANJAY KUMAR
+
+                </h2>
+
+
+                <p>
+
+                    UNITY GAME DEVELOPER
+
+                </p>
+
+
+                <p>
+
+                    Interested in game development,
+                    gameplay programming and level design.
+
+                </p>
+
+
+
+            </div>
+
+
+
+
+
+            <div class="contact-buttons">
+
+
+                <a href="#" target="_blank">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+
+                <a href="#" target="_blank">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+
+
+                <a href="mailto:yourmail@gmail.com">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+
+
+            </div>
+
+
+
+            <button id="contactBack" class="back-btn">
+
+                ◀ BACK
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+    <!-- IMAGE POPUP -->
+    <div id="imagePopup" class="image-popup hidden">
+
+        <span id="closePopup">&times;</span>
+
+        <img id="popupImg" src="" alt="">
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
